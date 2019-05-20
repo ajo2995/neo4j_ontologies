@@ -33,7 +33,7 @@ function parseOBO(fname) {
 }
 
 async function runAsync() {
-  await session.writeTransaction(tx => deleteNodes(tx, 'GO'));
+  await session.writeTransaction(tx => deleteNodes(tx, label));
   // let terms = [
   //   {
   //     id: 'GO:0000001',
