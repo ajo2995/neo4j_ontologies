@@ -5,7 +5,7 @@ const user = argv.user;
 const password = argv.password;
 const qtlFile = argv.qtl;
 
-const driver = neo4j.driver(uri, neo4j.auth.basic(user, password));
+const driver = neo4j.driver(uri, neo4j.auth.basic(user, password), { disableLosslessIntegers: true });
 const session = driver.session(neo4j.WRITE);
 
 function addNodes(tx, label, nodes) {
@@ -43,8 +43,8 @@ function parseQTLs(fname) {
           id: cols[0],
           map: 'GCA_000003195.3',
           region: loc[1],
-          start: loc[2],
-          end: loc[3]
+          start: +loc[2],
+          end: +loc[3]
         });
         if (!pubs.hasOwnProperty(cols[1])) {
           pubs[cols[1]] = true;
