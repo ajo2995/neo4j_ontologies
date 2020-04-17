@@ -23,7 +23,7 @@
   "dependencies": {
     "ini": "git://github.com/ajo2995/ini.git#master",
     "lodash": "^4.17.15",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "neo4j-driver": "^4.0.1"
   }
 }
