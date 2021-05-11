@@ -22,7 +22,7 @@
   "homepage": "https://github.com/ajo2995/neo4j_ontologies#readme",
   "dependencies": {
     "ini": "git://github.com/ajo2995/ini.git#master",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "minimist": "^1.2.3",
     "neo4j-driver": "^4.0.1"
   }
